@@ -48,10 +48,14 @@ export default function Exibidor(props) {
           <div> R$ { props.produto.preco },00 </div>
           <div> { props.produto.descricao } </div>
           
-          <button onClick={ () => SalvarCarrinho(props.produto.codigo) }>
+          <button 
+            onClick={() => {
+              SalvarCarrinho(props.produto.codigo)
+              alert("Produto adicionado ao carrinho com sucesso!")
+            }}
+          >
             Adicionar ao Carrinho
           </button>
-
 
         </ModeloDados>
       </Modelo>

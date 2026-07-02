@@ -3,6 +3,7 @@ import Navegacao from "../componentes/Navegacao"
 import Janela from "../componentes/Janela"
 import ProdutosExemplo from "../data/ProdutosExemplo"
 import ObterCarrinho from "../../functions/ObterCarrinho"
+import Pagamento from "../../functions/Pagamento"
 
 
 export default function Carrinho() {
@@ -64,6 +65,12 @@ useEffect(function() {
               currency: 'BRL'
             })}
         </h1>
+
+        {/* Botão de pagamento por Pix */}
+        <button onClick={Pagamento}>
+          Pagamento por Pix
+        </button>
+
 
       </Janela>
     </>
